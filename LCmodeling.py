@@ -73,20 +73,13 @@ def BLR_sim(t0, Fobs, tau, tau0, omega, fratio, percent_err, cadence=1, baseline
 
     Returns
     -------
-    tgap : TYPE
-        DESCRIPTION.
-    f1 : TYPE
-        DESCRIPTION.
-    f2 : TYPE
-        DESCRIPTION.
-    F_tot : TYPE
-        DESCRIPTION.
-    noise : TYPE
-        DESCRIPTION.
-    tau : TYPE
-        DESCRIPTION.
-    tfunc : TYPE
-        DESCRIPTION.
+    tgap : time array with seasonal gaps
+    f1 : light curve of one convolved image
+    f2 : second light curve of one convolved image
+    F_tot : the total observed (unresolved) flux
+    noise : flux noise
+    tau : time delay b/w f1 and f2
+    tfunc : the transfer function
 
     """
 
