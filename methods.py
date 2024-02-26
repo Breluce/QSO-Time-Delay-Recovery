@@ -42,9 +42,6 @@ def ACF(t, F, Ferr, nlags=150):
 
     return res, acf, nlags, tpred, lcpred
 
-def Fourier(t, F, Ferr):
-    return
-
 def f1Rec(time, Ftot, tau0_try, mu_try):
 
     F = interpolate.interp1d(time, Ftot, bounds_error=False,
@@ -95,7 +92,3 @@ def epsRec(t, F, tau0_try, mu_try=0.5):
 
     return(eps_array)
 
-
-
-def MICA(x):
-    return
