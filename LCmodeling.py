@@ -39,14 +39,10 @@ def transfer_func(tau, tau0, omega, f):
 
     Parameters
     ----------
-    tau : TYPE
-        DESCRIPTION.
-    tau0 : TYPE
-        DESCRIPTION.
-    omega : TYPE
-        DESCRIPTION.
-    f : TYPE
-        DESCRIPTION.
+    tau : time delay test values (array)
+    tau0 : true time delay 
+    omega : 
+    f : light curve flux
 
     Returns
     -------
