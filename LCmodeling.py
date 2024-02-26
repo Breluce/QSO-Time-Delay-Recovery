@@ -41,7 +41,7 @@ def transfer_func(tau, tau0, omega, f):
     ----------
     tau : time delay test values (array)
     tau0 : true time delay 
-    omega : 
+    omega : gaussian width (in days)
     f : light curve flux
 
     Returns
@@ -61,20 +61,13 @@ def BLR_sim(t0, Fobs, tau, tau0, omega, fratio, percent_err, cadence=1, baseline
 
     Parameters
     ----------
-    t0 : TYPE
-        DESCRIPTION.
-    Fobs : TYPE
-        DESCRIPTION.
-    tau : TYPE
-        DESCRIPTION.
-    tau0 : TYPE
-        DESCRIPTION.
-    omega : TYPE
-        DESCRIPTION.
-    f : TYPE
-        DESCRIPTION.
-    percent_err : TYPE
-        DESCRIPTION.
+    t0 : time array of observation
+    Fobs : observed flux
+    tau : time delay test values (array)
+    tau0 : true time delay 
+    omega : gaussian width (in days)
+    f : light curve flux
+    percent_err : percent error in flux light curve
     cadence : TYPE, optional
         DESCRIPTION. The default is 1.
 
