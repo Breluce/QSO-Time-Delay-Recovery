@@ -35,7 +35,7 @@ def add_season(t, lc_start=0, season_start=90, season_end=270):
 
 def transfer_func(tau, tau0, omega, f):
     """
-    
+    Function to generate the transfer function used in BLR simulation.
 
     Parameters
     ----------
@@ -46,8 +46,7 @@ def transfer_func(tau, tau0, omega, f):
 
     Returns
     -------
-    TYPE
-        DESCRIPTION.
+    the transfer function
 
     """
 
@@ -57,7 +56,7 @@ def transfer_func(tau, tau0, omega, f):
 
 def BLR_sim(t0, Fobs, tau, tau0, omega, fratio, percent_err, cadence=1, baseline_yrs=5):
     """
-    
+    Simulates a light curve of a broad line reverberation (BLR) qso.
 
     Parameters
     ----------
@@ -153,33 +152,20 @@ def lensed_sim(t0, Fobs, tau0, mu1, mu2, percent_err, cadence=1, baseline_yrs=5)
 
     Parameters
     ----------
-    t0 : TYPE
-        DESCRIPTION.
-    Fobs : TYPE
-        DESCRIPTION.
-    tau0 : TYPE
-        DESCRIPTION.
-    mu1 : TYPE
-        DESCRIPTION.
-    mu2 : TYPE
-        DESCRIPTION.
-    percent_err : TYPE
-        DESCRIPTION.
+    t0 : time array of observation
+    Fobs : observed flux
+    tau0 : true time delay
+    mu1 : relative magnification of first light curve 
+    mu2 : relative magnification of second light curve
+    percent_err : percent error for observed flux
     cadence : TYPE, optional
-        DESCRIPTION. The default is 1.
+        The default is 1.
 
     Returns
     -------
-    t : TYPE
-        DESCRIPTION.
-    TYPE
-        DESCRIPTION.
-    TYPE
-        DESCRIPTION.
-    F_tot : TYPE
-        DESCRIPTION.
-    noise : TYPE
-        DESCRIPTION.
+    t : time array with seasonal gaps
+    F_tot : total simulated flux
+    noise : flux noise
 
     """
 
@@ -230,25 +216,20 @@ def lensed_sim(t0, Fobs, tau0, mu1, mu2, percent_err, cadence=1, baseline_yrs=5)
 
 def single_sim(t0, Fobs, percent_err, cadence=1, baseline_yrs=5):
     """
-    
+    Simulates a single light curve with seasonal gaps.
 
     Parameters
     ----------
-    t0 : TYPE
-        DESCRIPTION.
-    Fobs : TYPE
-        DESCRIPTION.
-    percent_err : TYPE
-        DESCRIPTION.
+    t0 : observed time array
+    Fobs : observed flux
+    percent_err : percent error of observed flux
     cadence : TYPE, optional
-        DESCRIPTION. The default is 1.
+        The default is 1.
 
     Returns
     -------
-    t : TYPE
-        DESCRIPTION.
-    f : TYPE
-        DESCRIPTION.
+    t : time array with seasonal gaps
+    f : simulated flux
 
     """
 
